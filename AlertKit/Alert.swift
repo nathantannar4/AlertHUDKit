@@ -27,21 +27,21 @@
 
 import UIKit
 
-open class Alert {
+public class Alert {
     
     
     /// The state of an alert
     ///
     /// - transitioning: The alert is animating
     /// - active: The alert has been presented
-    /// - inactive: The alert has been dismissed
-    enum State {
+    /// - inactive: The alert is not presented
+    public enum State {
         case transitioning, active, inactive
     }
     
     
     /// The style of an alert
-    enum Style {
+    public enum Style {
         case info, success, warning, danger
         
         var color: UIColor {

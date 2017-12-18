@@ -27,10 +27,10 @@ s.source = { :git => "https://github.com/nathantannar4/AlertHUDKit.git", :tag =>
 s.framework = "UIKit"
 
 # 8 - Source Files
-s.source_files = "AlertHUDKit/**/*.{swift}"
+s.source_files = "Source/**/*.{swift}"
 
 # 9 - Resources
-s.resources = "AlertHUDKit/**/*.{ttf}"
+s.resources = "Source/**/*.{ttf}"
 
 
 

@@ -1,0 +1,13 @@
+version: "Apple Swift version 4.0.3 (swiftlang-900.0.74.1 clang-900.0.39.2)"
+options: "f6c53e10c7887b638bf9149c891b5a43"
+build_time: [1513560987, 238187000]
+inputs:
+  "/Users/nathantannar/Documents/iOS/AlertHUDKit/Source/DownloadWheel.swift": [9223372036, 854775807]
+  "/Users/nathantannar/Documents/iOS/AlertHUDKit/Source/Extensions/UIView+AutoLayout.swift": [9223372036, 854775807]
+  "/Users/nathantannar/Documents/iOS/AlertHUDKit/Source/Alert.swift": [9223372036, 854775807]
+  "/Users/nathantannar/Documents/iOS/AlertHUDKit/Source/Extensions/UIColor+Extensions.swift": [9223372036, 854775807]
+  "/Users/nathantannar/Documents/iOS/AlertHUDKit/Source/ProgressHUD.swift": [9223372036, 854775807]
+  "/Users/nathantannar/Documents/iOS/AlertHUDKit/Source/Toast.swift": [9223372036, 854775807]
+  "/Users/nathantannar/Documents/iOS/AlertHUDKit/Source/DownloadLine.swift": [9223372036, 854775807]
+  "/Users/nathantannar/Documents/iOS/AlertHUDKit/Source/Ping.swift": [9223372036, 854775807]
+  "/Users/nathantannar/Documents/iOS/AlertHUDKit/Source/Extensions/UIDevice+Extensions.swift": [9223372036, 854775807]

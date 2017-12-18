@@ -68,7 +68,7 @@ open class DownloadLine: UIView {
     
     public private(set) lazy var session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: OperationQueue())
     
-    private var completion: ((_ line: DownloadLine, _ data: Data?, _ error: Error?)->Void)?
+    public var completion: ((_ line: DownloadLine, _ data: Data?, _ error: Error?)->Void)?
     
     // MARK: - Properties
     

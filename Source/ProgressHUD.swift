@@ -67,8 +67,8 @@ open class ProgressHUD: UIView {
     
     public private(set) lazy var session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: OperationQueue())
     
-    private var progressUpdate: ((_ hud: ProgressHUD, _ progress: CGFloat)->Void)?
-    private var completion: ((_ hud: ProgressHUD, _ data: Data?, _ error: Error?)->Void)?
+    public var progressUpdate: ((_ hud: ProgressHUD, _ progress: CGFloat)->Void)?
+    public var completion: ((_ hud: ProgressHUD, _ data: Data?, _ error: Error?)->Void)?
     
     // MARK: - Properties
     

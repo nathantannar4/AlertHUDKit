@@ -42,7 +42,7 @@ open class Ping: UIView {
         return label
     }()
     
-    private var statusBar: UIView? {
+    public var statusBar: UIView? {
         return UIApplication.shared.value(forKey: "statusBar") as? UIView
     }
     

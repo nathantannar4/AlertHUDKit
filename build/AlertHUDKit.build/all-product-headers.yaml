@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/nathantannar/Documents/iOS/AlertHUDKit/build/Release-iphoneos/AlertHUDKit.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AlertHUDKit-Swift.h",
+          'external-contents': "/Users/nathantannar/Documents/iOS/AlertHUDKit/build/Release-iphoneos/AlertHUDKit.framework/Headers/AlertHUDKit-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "AlertKit.h",
+          'external-contents': "/Users/nathantannar/Documents/iOS/AlertHUDKit/Source/Supporting Files/AlertKit.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nathantannar/Documents/iOS/AlertHUDKit/build/Release-iphoneos/AlertHUDKit.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nathantannar/Documents/iOS/AlertHUDKit/build/AlertHUDKit.build/Release-iphoneos/AlertHUDKit.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

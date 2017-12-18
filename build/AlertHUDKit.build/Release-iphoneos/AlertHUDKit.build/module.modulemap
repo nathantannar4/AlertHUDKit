@@ -1,0 +1,4 @@
+framework module AlertHUDKit {
+    header "AlertHUDKit-Swift.h"
+    requires objc
+}

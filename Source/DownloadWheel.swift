@@ -92,7 +92,7 @@ open class DownloadWheel: UIView {
     
     public private(set) lazy var session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: OperationQueue())
     
-    private var completion: ((_ wheel: DownloadWheel, _ data: Data?, _ error: Error?)->Void)?
+    public var completion: ((_ wheel: DownloadWheel, _ data: Data?, _ error: Error?)->Void)?
     
     // MARK: - Properties
     

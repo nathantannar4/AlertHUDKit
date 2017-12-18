@@ -160,7 +160,7 @@ public class Lorem {
                 while size < maxNbChars {
                     let w = (size != 0 ? " " : "") + word()
                     result.append(w)
-                    size += w.characters.count
+                    size += w.count
                 }
                 
                 _ = result.popLast()
@@ -172,7 +172,7 @@ public class Lorem {
                 while size < maxNbChars {
                     let s = (size != 0 ? " " : "") + sentence()
                     result.append(s)
-                    size += s.characters.count
+                    size += s.count
                 }
                 
                 _ = result.popLast()
@@ -184,7 +184,7 @@ public class Lorem {
                 while size < maxNbChars {
                     let p = (size != 0 ? "\n" : "") + paragraph()
                     result.append(p)
-                    size += p.characters.count
+                    size += p.count
                 }
                 
                 _ = result.popLast()

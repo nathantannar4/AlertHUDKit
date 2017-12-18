@@ -25,6 +25,8 @@
 //  Created by Nathan Tannar on 2/12/17.
 //
 
+import UIKit
+
 extension UIColor {
     
     func lighter(by percentage: CGFloat = 30.0) -> UIColor {

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AlertKit
+import AlertHUDKit
 
 class ViewController: UIViewController {
 

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AlertKit
+import AlertHUDKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

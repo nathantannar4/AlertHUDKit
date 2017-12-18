@@ -29,7 +29,6 @@ import UIKit
 
 public class Alert {
     
-    
     /// The state of an alert
     ///
     /// - transitioning: The alert is animating
@@ -79,8 +78,8 @@ public class Alert {
             /// The color used for alerts of Alert.Style == .info. Default is Apple's default blue tint.
             public static var Info: UIColor = UIColor(red: 0, green: 122/255, blue: 1, alpha: 1)
             
-            /// The color used for alerts of Alert.Style == .success. Default is Material Green 600
-            public static var Success: UIColor = UIColor(red: 77/255, green: 162/255, blue: 71/255, alpha: 1)
+            /// The color used for alerts of Alert.Style == .success. Default is Material Green 800
+            public static var Success: UIColor = UIColor(red: 46/255, green: 125/255, blue: 50/255, alpha: 1)
             
             /// The color used for alerts of Alert.Style == .warning. Default is Material Deep Orange 600
             public static var Warning: UIColor = UIColor(red: 235/255, green: 80/255, blue: 43/255, alpha: 1)

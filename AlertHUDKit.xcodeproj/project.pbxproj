@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		382CE7C71FE5ECFD0075E3C4 /* DownloadLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382CE7C61FE5ECFD0075E3C4 /* DownloadLine.swift */; };
+		385294E81FE5FAB700730B65 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385294E71FE5FAB700730B65 /* ProgressHUD.swift */; };
 		38820CE41F99BE8C00D14502 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38820CE31F99BE8C00D14502 /* UIView+AutoLayout.swift */; };
 		38820CE61F99D5F700D14502 /* Lorem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38820CE51F99D5F700D14502 /* Lorem.swift */; };
 		38820CE81F99DFE600D14502 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38820CE71F99DFE600D14502 /* UIDevice+Extensions.swift */; };
@@ -21,6 +23,7 @@
 		389127A81F99B3C600702C05 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389127A71F99B3C500702C05 /* Alert.swift */; };
 		389127A91F99B4B000702C05 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389127A31F99B2FF00702C05 /* Toast.swift */; };
 		389127AD1F99BAA900702C05 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389127AC1F99BAA900702C05 /* UIColor+Extensions.swift */; };
+		38BE0FD31FE5D23A0014C4EB /* DownloadWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE0FD21FE5D23A0014C4EB /* DownloadWheel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		382CE7C61FE5ECFD0075E3C4 /* DownloadLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadLine.swift; sourceTree = "<group>"; };
+		385294E71FE5FAB700730B65 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		38820CE31F99BE8C00D14502 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		38820CE51F99D5F700D14502 /* Lorem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lorem.swift; sourceTree = "<group>"; };
 		38820CE71F99DFE600D14502 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
@@ -64,6 +69,7 @@
 		389127A31F99B2FF00702C05 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		389127A71F99B3C500702C05 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		389127AC1F99BAA900702C05 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		38BE0FD21FE5D23A0014C4EB /* DownloadWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadWheel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				389127A71F99B3C500702C05 /* Alert.swift */,
+				385294E71FE5FAB700730B65 /* ProgressHUD.swift */,
+				38BE0FD21FE5D23A0014C4EB /* DownloadWheel.swift */,
+				382CE7C61FE5ECFD0075E3C4 /* DownloadLine.swift */,
 				389127A11F99B2F400702C05 /* Ping.swift */,
 				389127A31F99B2FF00702C05 /* Toast.swift */,
 				389127AE1F99BAAD00702C05 /* Extensions */,
@@ -262,10 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38BE0FD31FE5D23A0014C4EB /* DownloadWheel.swift in Sources */,
 				38820CE41F99BE8C00D14502 /* UIView+AutoLayout.swift in Sources */,
 				389127A81F99B3C600702C05 /* Alert.swift in Sources */,
 				389127AD1F99BAA900702C05 /* UIColor+Extensions.swift in Sources */,
+				385294E81FE5FAB700730B65 /* ProgressHUD.swift in Sources */,
 				389127A91F99B4B000702C05 /* Toast.swift in Sources */,
+				382CE7C71FE5ECFD0075E3C4 /* DownloadLine.swift in Sources */,
 				389127A21F99B2F400702C05 /* Ping.swift in Sources */,
 				38820CE81F99DFE600D14502 /* UIDevice+Extensions.swift in Sources */,
 			);
@@ -423,7 +435,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 9EUCWD26TP;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -447,7 +459,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 9EUCWD26TP;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

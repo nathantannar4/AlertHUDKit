@@ -29,7 +29,7 @@ import UIKit
 
 open class Ping: UIView {
     
-    // MARK: - Properties
+    // MARK: - Properties [Public]
     
     open var currentState: Alert.State = .inactive
     
@@ -81,7 +81,10 @@ open class Ping: UIView {
                 self.frame.origin.y = statusBar.frame.origin.y
             }, completion: { _ in
                 self.currentState = .active
-                self.addConstraints(statusBar.topAnchor, left: statusBar.leftAnchor, right: statusBar.rightAnchor, heightConstant: self.frame.height)
+                self.anchor(statusBar.topAnchor,
+                            left: statusBar.leftAnchor,
+                            right: statusBar.rightAnchor,
+                            heightConstant: self.frame.height)
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
                     self.dismiss(animated: animated)
                 }
@@ -93,14 +96,17 @@ open class Ping: UIView {
         
         guard currentState == .active else { return }
         currentState = .transitioning
-        UIView.transition(with: self, duration: 0.3, options: .curveEaseIn, animations: {
+        if animated {
+            UIView.transition(with: self, duration: 0.3, options: .curveEaseIn, animations: {
                 self.frame.origin = CGPoint(x: 0, y: -self.frame.height)
             }, completion: { finished in
                 self.currentState = .inactive
-                self.constraints.forEach { self.removeConstraint($0) }
                 self.removeFromSuperview()
-            }
-        )
+            })
+        } else {
+            currentState = .inactive
+            removeFromSuperview()
+        }
     }
     
     private func requiredFrame() -> CGRect {

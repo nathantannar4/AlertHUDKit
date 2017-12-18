@@ -29,7 +29,7 @@ import UIKit
 
 open class Toast: UIView {
     
-    // MARK: - Properties
+    // MARK: - Properties [Public]
     
     open var dismissOnTap: Bool = true
     
@@ -39,7 +39,11 @@ open class Toast: UIView {
         }
     }
     
-    open var currentState: Alert.State = .inactive
+    open var currentState: Alert.State = .inactive {
+        didSet {
+            isUserInteractionEnabled = currentState != .transitioning
+        }
+    }
     
     open var isRippleEnabled: Bool = true
     
@@ -121,9 +125,10 @@ open class Toast: UIView {
         addGestureRecognizer(UITapGestureRecognizer(target: self, action:  #selector(Toast.didTap(gesture:))))
         actionButton.addTarget(self, action: #selector(Toast.didTapActionButton(button:)), for: .touchUpInside)
         backgroundColor = UIColor(red: 97/255, green: 97/255, blue: 97/255, alpha: 1)
-        layer.shadowRadius = 1
+        layer.shadowRadius = 2
+        layer.shadowOffset = CGSize(width: 0, height: -1)
         layer.shadowOpacity = 0.3
-        layer.shadowColor = UIColor.lightGray.cgColor
+        layer.shadowColor = UIColor.darkGray.cgColor
     }
     
     private func layoutRippleView() {
@@ -213,10 +218,10 @@ open class Toast: UIView {
                 self.frame.origin.y = viewController.view.frame.height - self.frame.height
             }, completion: { _ in
                 self.currentState = .active
-                self.addConstraints(left: viewController.view.leftAnchor,
-                                    bottom: viewController.view.bottomAnchor,
-                                    right: viewController.view.rightAnchor,
-                                    heightConstant: self.frame.height)
+                self.anchor(left: viewController.view.leftAnchor,
+                            bottom: viewController.view.bottomAnchor,
+                            right: viewController.view.rightAnchor,
+                            heightConstant: self.frame.height)
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
                     self.dismiss(animated: animated)
                 }
@@ -228,14 +233,17 @@ open class Toast: UIView {
         
         guard currentState == .active else { return }
         currentState = .transitioning
-        UIView.transition(with: self, duration: 0.3, options: .curveLinear, animations: {
+        if animated {
+            UIView.transition(with: self, duration: 0.3, options: .curveLinear, animations: {
                 self.alpha = 0
             }, completion: { _ in
                 self.currentState = .inactive
-                self.constraints.forEach { self.removeConstraint($0) }
                 self.removeFromSuperview()
-            }
-        )
+            })
+        } else {
+            currentState = .inactive
+            removeFromSuperview()
+        }
     }
     
     @objc
@@ -247,7 +255,11 @@ open class Toast: UIView {
     
     @objc
     private func didTapActionButton(button: UIButton) {
+        button.isUserInteractionEnabled = false
+        rippleView.center = button.center
+        animate()
         action?()
+        dismiss()
     }
     
     // MARK: - Ripple Animation Methods

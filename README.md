@@ -3,7 +3,7 @@
 ### Installation via CocoaPods
 
 ```ruby
-pod 'DynamicTabBarController'
+pod 'AlertHUDKit'
 ```
 
 ### Requirements

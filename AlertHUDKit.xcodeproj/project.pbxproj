@@ -11,7 +11,6 @@
 		384040081FE74FEF0088CCA9 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 384040051FE74FEE0088CCA9 /* LICENSE */; };
 		384040091FE74FEF0088CCA9 /* AlertHUDKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 384040061FE74FEE0088CCA9 /* AlertHUDKit.podspec */; };
 		3840400A1FE74FEF0088CCA9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 384040071FE74FEF0088CCA9 /* README.md */; };
-		385294E81FE5FAB700730B65 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385294E71FE5FAB700730B65 /* ProgressHUD.swift */; };
 		38820CE41F99BE8C00D14502 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38820CE31F99BE8C00D14502 /* UIView+AutoLayout.swift */; };
 		38820CE61F99D5F700D14502 /* Lorem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38820CE51F99D5F700D14502 /* Lorem.swift */; };
 		38820CE81F99DFE600D14502 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38820CE71F99DFE600D14502 /* UIDevice+Extensions.swift */; };
@@ -58,7 +57,6 @@
 		384040051FE74FEE0088CCA9 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		384040061FE74FEE0088CCA9 /* AlertHUDKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AlertHUDKit.podspec; sourceTree = "<group>"; };
 		384040071FE74FEF0088CCA9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		385294E71FE5FAB700730B65 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		38820CE31F99BE8C00D14502 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		38820CE51F99D5F700D14502 /* Lorem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lorem.swift; sourceTree = "<group>"; };
 		38820CE71F99DFE600D14502 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				389127A71F99B3C500702C05 /* Alert.swift */,
-				385294E71FE5FAB700730B65 /* ProgressHUD.swift */,
 				38BE0FD21FE5D23A0014C4EB /* DownloadWheel.swift */,
 				382CE7C61FE5ECFD0075E3C4 /* DownloadLine.swift */,
 				389127A11F99B2F400702C05 /* Ping.swift */,
@@ -223,7 +220,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Nathan Tannar";
 				TargetAttributes = {
 					389127781F99B21300702C05 = {
@@ -287,7 +284,6 @@
 				38820CE41F99BE8C00D14502 /* UIView+AutoLayout.swift in Sources */,
 				389127A81F99B3C600702C05 /* Alert.swift in Sources */,
 				389127AD1F99BAA900702C05 /* UIColor+Extensions.swift in Sources */,
-				385294E81FE5FAB700730B65 /* ProgressHUD.swift in Sources */,
 				389127A91F99B4B000702C05 /* Toast.swift in Sources */,
 				382CE7C71FE5ECFD0075E3C4 /* DownloadLine.swift in Sources */,
 				389127A21F99B2F400702C05 /* Ping.swift in Sources */,
@@ -341,6 +337,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -348,6 +345,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -401,6 +399,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -408,6 +407,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

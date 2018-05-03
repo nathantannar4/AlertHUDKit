@@ -9,7 +9,7 @@ s.summary = "A collection of alerts for toasting, pinging and progress messages"
 s.requires_arc = true
 
 # 2 - Version
-s.version = "1.0.1"
+s.version = "1.1.1"
 
 # 3 - License
 s.license = { :type => "MIT", :file => "LICENSE" }

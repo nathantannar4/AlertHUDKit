@@ -44,12 +44,6 @@ class ViewController: UIViewController {
         d.frame = CGRect(origin: CGPoint(x: view.center.x - 100, y: 250), size: CGSize(width: 200, height: 44))
         view.addSubview(d)
         
-        let e = UIButton()
-        e.backgroundColor = .red
-        e.setTitle("Show ProgressHUD", for: .normal)
-        e.addTarget(self, action: #selector(showProgressHUD), for: .touchUpInside)
-        e.frame = CGRect(origin: CGPoint(x: view.center.x - 100, y: 300), size: CGSize(width: 200, height: 44))
-        view.addSubview(e)
     }
     
     @objc
@@ -82,18 +76,6 @@ class ViewController: UIViewController {
         let url = URL(string: "https://edmullen.net/test/rc.jpg")!
 //        line.dismissOnCompletion = false
         line.downloadFile(from: url, completion: nil).present(self, topAnchor: view.safeAreaLayoutGuide.topAnchor, animated: true)
-    }
-    
-    @objc
-    func showProgressHUD() {
-        
-        let url = URL(string: "https://edmullen.net/test/rc.jpg")!
-        ProgressHUD(title: "Download Started", subtitle: "Downloading...", image: nil)
-            .downloadFile(from: url, completion: { hud, data, error in
-            hud.titleLabel.text = error == nil ? "Complete" : "Error"
-        }).onProgressUpdate { hud, progress in
-            hud.subtitleLabel.text = "\(Int(progress * 100)) %"
-        }.present(self, animated: true, duration: .infinity)
     }
 }
 

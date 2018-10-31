@@ -136,7 +136,7 @@ open class DownloadWheel: UIView {
     }
     
     private func setupNotificationObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(animatePulsatingLayer), name: .UIApplicationWillEnterForeground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(animatePulsatingLayer), name: UIApplication.willEnterForegroundNotification, object: nil)
     }
     
     private func createCircleShapeLayer(strokeColor: UIColor, fillColor: UIColor) -> CAShapeLayer {
@@ -145,7 +145,7 @@ open class DownloadWheel: UIView {
         layer.strokeColor = strokeColor.cgColor
         layer.lineWidth = 20
         layer.fillColor = fillColor.cgColor
-        layer.lineCap = kCALineCapRound
+        layer.lineCap = CAShapeLayerLineCap.round
         layer.position = center
         return layer
     }
@@ -216,7 +216,7 @@ open class DownloadWheel: UIView {
         animation.toValue = 1.5
         animation.fromValue = 1.1
         animation.duration = 0.8
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         animation.autoreverses = true
         animation.repeatCount = .infinity
         
@@ -228,7 +228,7 @@ open class DownloadWheel: UIView {
         let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
         basicAnimation.toValue = 1
         basicAnimation.duration = 2
-        basicAnimation.fillMode = kCAFillModeForwards
+        basicAnimation.fillMode = CAMediaTimingFillMode.forwards
         basicAnimation.isRemovedOnCompletion = false
         
         progressLayer.add(basicAnimation, forKey: "progress")

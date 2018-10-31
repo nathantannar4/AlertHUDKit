@@ -33,7 +33,7 @@ open class Ping: UIView {
     
     open var currentState: Alert.State = .inactive
     
-    open let textLabel: UILabel = {
+    public let textLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.adjustsFontSizeToFitWidth = true

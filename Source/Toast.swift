@@ -75,7 +75,7 @@ open class Toast: UIView {
         }
     }
     
-    open let textLabel: UILabel = {
+    public let textLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
         label.adjustsFontSizeToFitWidth = true
@@ -85,7 +85,7 @@ open class Toast: UIView {
         return label
     }()
     
-    open let actionButton: UIButton = {
+    public let actionButton: UIButton = {
         let button = UIButton()
         button.setTitleColor(.white, for: .normal)
         button.setTitleColor(UIColor(white: 1, alpha: 0.3), for: .highlighted)
@@ -280,7 +280,7 @@ open class Toast: UIView {
         UIView.animate(withDuration: 0.1, delay: 0, options: .allowUserInteraction, animations: {
             self.rippleBackgroundView.alpha = 1
         }, completion: { _ in
-            UIView.animate(withDuration: self.rippleAnimationTime, delay: 0, options: UIViewAnimationOptions.allowUserInteraction, animations: {
+            UIView.animate(withDuration: self.rippleAnimationTime, delay: 0, options: UIView.AnimationOptions.allowUserInteraction, animations: {
                 self.rippleBackgroundView.alpha = 0
             }, completion: nil)
         })
